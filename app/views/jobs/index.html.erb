@@ -15,8 +15,11 @@
                     <div class="col-md-3">
                     </div>
                     <div class="col-md-9">
-                      <p class="semi-bold text-small uppercase"><%= job.employer.name %> &middot; </p>
+                      <p class="semi-bold text-small uppercase"><i class="fa fa-star fa-star-exclusive" aria-hidden="true"></i> &middot; <%= job.employer.name %> &middot; <%= job.location %> &middot; <%= job.category.name %> &middot; <%= job.type.name %></p>
                       <h4 class="semi-bold"><%= job.title %></h4>
+                        <div class="btn-group" role="group" aria-label="...">
+                          <button class="btn btn-job">Les Mer</button>
+                        </div>
                     </div>
                   </div>
                 </div>
