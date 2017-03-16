@@ -1,2 +1,33 @@
-<h1>Jobs#index</h1>
-<p>Find me in app/views/jobs/index.html.erb</p>
+<page="page" id="jobs_index">
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <p class="semi-bold text-muted text-small">Annonse</p>
+        </div>
+        <div class="col-md-8">
+          <h4 class="semi-bold">Ledige Stillinger</h4>
+          <% @jobs.each do |job| %>
+            <%= link_to job do %>
+              <div class="panel panel-default panel-job">
+                <div class="panel-body panel-body-job">
+                  <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-9">
+                      <p class="semi-bold text-small uppercase"><%= job.employer.name %> &middot; </p>
+                      <h4 class="semi-bold"><%= job.title %></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="col-md-2">
+          <p class="semi-bold text-muted text-small">Annonse</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</page>
